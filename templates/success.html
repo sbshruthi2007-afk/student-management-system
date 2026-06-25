@@ -2,13 +2,41 @@
 <html>
 <head>
     <title>Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <h1>Student Added Successfully!</h1>
+<div class="container">
+    <div class="login-box">
 
-    <h3>Motivational Quote:</h3>
-    <p>{{ quote }}</p>
+        <h1>✅ Student Added Successfully!</h1>
+
+        <p>Your student data has been saved in the database.</p>
+
+        <h3>💡 Motivational Quote</h3>
+        <p><i>"{{ quote }}"</i></p>
+
+        <br>
+
+        <!-- ✅ FIXED: stay inside authenticated flow -->
+        <a href="/add-student">
+            <button>➕ Add Another Student</button>
+        </a>
+
+        <br><br>
+
+        <a href="/leaderboard">
+            <button>🏆 View Leaderboard</button>
+        </a>
+
+        <br><br>
+
+        <a href="/dashboard">
+            <button>🏠 Go Dashboard</button>
+        </a>
+
+    </div>
+</div>
 
 </body>
 </html>

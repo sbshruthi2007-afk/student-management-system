@@ -1,78 +1,82 @@
-# student-management-system
-capstone project
-Student Management System (Flask Web Application)
+Student Management System
 
-Overview
-This is a Flask-based web application designed to manage student records efficiently. It supports adding students, storing records in CSV format, displaying a leaderboard based on average scores, and includes form validation, motivational quote integration, and custom error handling pages.
+A full-stack web application developed using Flask, HTML, CSS, and SQLite to manage student records efficiently. This project provides a structured system for user authentication, student data management, leaderboard tracking, and performance monitoring.
+
+Project Overview
+
+The Student Management System is designed to simplify the process of storing and managing student information through an interactive web interface. It allows users to register, log in, view dashboards, manage student records, and track rankings through a leaderboard system.
 
 Features
-- Add student details through a web form
-- Store student records in CSV file
-- Prevent duplicate student entries
-- Display leaderboard based on student average scores
-- Integrate motivational quote API
-- Form validation with flash messages
-- Custom 404 and 500 error pages
-- Unit testing using unittest framework
-- GitHub Actions CI for automated testing
+
+• User Registration and Login Authentication
+• Session Management
+• Dashboard Interface
+• Student Record Management
+• Leaderboard Ranking System
+• Form Validation
+• Error and Success Notifications
+• API Integration
+• Responsive and Modern User Interface
 
 Technologies Used
-- Python
-- Flask
-- HTML
-- CSV
-- Requests library
-
+Frontend
+HTML
+CSS
+Backend
+Python
+Flask
+Database
+SQLite
 Project Structure
-student-management-system/
-│
-├── templates/
-│   ├── add_student.html
-│   ├── leaderboard.html
-│   ├── error_404.html
-│   ├── error_500.html
-│
-├── student_form.py
-├── students.csv
-├── test_app.py
-├── README.md
+
+Student-Management-System
+│── app.py
+│── requirements.txt
+│── README.md
+│── student.db
+
+templates/
+• login.html
+• register.html
+• dashboard.html
+• leaderboard.html
+
+static/
+• style.css
 
 Installation and Setup
+Clone the repository from GitHub.
+Open the project folder in your preferred code editor.
+Install the required dependencies using the requirements file.
+Run the Flask application.
+Open the application in your browser using the local server address.
+Workflow
 
-1. Clone the repository
-git clone https://github.com/your-username/student-management-system.git
+The system follows a simple workflow:
 
-2. Navigate to project folder
-cd student-management-system
-
-3. Install dependencies
-pip install flask requests
-
-4. Run the application
-python student_form.py
-
-How to Use
-1. Run the Flask application
-2. Open browser and go to http://127.0.0.1:5000
-3. Add student details using the form
-4. View student leaderboard
-5. Check validation messages and rankings
-
-Testing
-Run unit tests using:
-python -m unittest test_app.py
-
-CI/CD
-This project uses GitHub Actions for continuous integration to automatically run tests on every push.
-
-Future Improvements
-- Add database support (MySQL or PostgreSQL)
-- Add login and authentication system
-- Improve UI using Bootstrap
-- Add edit/update student feature
-
-Version
-v1.0
-
+User accesses the login page.
+User enters login credentials.
+Flask receives the form data and processes the request.
+The system validates the data using SQLite database.
+If the credentials are valid, the user is redirected to the dashboard.
+If invalid, an error message is displayed.
+Student records are managed and leaderboard scores are updated accordingly.
+Core Concepts Implemented
+Flask Routing
+Request and Response Handling
+Session Management
+Database Integration
+Form Handling
+Flash Messaging
+Page Redirection
+API Integration
+Future Enhancements
+Secure password hashing
+Admin panel integration
+Advanced analytics dashboard
+Export reports to CSV/PDF
+Improved UI/UX design
+Search and filter functionality
 Author
+
 Shruthi S B

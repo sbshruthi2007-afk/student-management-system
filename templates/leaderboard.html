@@ -2,27 +2,44 @@
 <html>
 <head>
     <title>Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h1>Student Leaderboard</h1>
+<h1 style="text-align:center;">🏆 Student Leaderboard</h1>
+<h3 style="text-align:center;">Welcome, {{ username }}</h3>
 
-<table border="1">
+<table>
     <tr>
-        <th>Rank</th>
         <th>Name</th>
+        <th>Age</th>
+        <th>Math</th>
+        <th>Science</th>
+        <th>English</th>
         <th>Average</th>
+        <th>Actions</th>
     </tr>
 
     {% for student in students %}
     <tr>
-        <td>{{ loop.index }}</td>
         <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.math }}</td>
+        <td>{{ student.science }}</td>
+        <td>{{ student.english }}</td>
         <td>{{ student.average }}</td>
+        <td>
+            <a href="/edit/{{ student.id }}"><button>✏ Edit</button></a>
+            <a href="/delete/{{ student.id }}"><button>🗑 Delete</button></a>
+        </td>
     </tr>
     {% endfor %}
-
 </table>
+
+<div style="text-align:center;">
+    <a href="/dashboard"><button>⬅ Back</button></a>
+    <a href="/logout"><button>Logout</button></a>
+</div>
 
 </body>
 </html>

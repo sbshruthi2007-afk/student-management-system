@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - StudentOS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="auth-page">
+
+    <div class="auth-left">
+        <div class="auth-content">
+            <h1>StudentOS</h1>
+            <h2>Learn. Track. Grow.</h2>
+
+            <p>
+                A premium student management platform
+                designed to simplify academic tracking,
+                rankings, and performance analysis.
+            </p>
+        </div>
+    </div>
+
+    <div class="auth-right">
+
+        <div class="auth-box">
+
+            <h3>Sign In</h3>
+            <p>Access your dashboard</p>
+
+            <form method="POST">
+
+                <input type="email" name="email" placeholder="Email" required>
+
+                <input type="password" name="password" placeholder="Password" required>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            {% if message %}
+                <div class="error-message">
+                    {{ message }}
+                </div>
+            {% endif %}
+
+            <div class="auth-footer">
+                New here?
+                <a href="/register">Create Account</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
